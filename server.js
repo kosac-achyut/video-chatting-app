@@ -14,7 +14,19 @@ app.use('/peerjs', peerServer);
 
 app.set('view engine', 'ejs')
 app.use(express.static('public'));
-// app.use(express.static(_dirname+'/public/img'));
+app.use(express.urlencoded({extended:false})); 
+
+const str = "1234567890abcdefghijklmnopqrstuvwxyz"
+
+function randomStr(len, arr) { 
+            var ans = ''; 
+            for (var i = len; i > 0; i--) { 
+                ans +=  
+                  arr[Math.floor(Math.random() * arr.length)]; 
+            } 
+            return ans; 
+        } 
+
 
 app.get('/', (req, res) => {
   // res.redirect(`/${uuidV4()}`)
@@ -22,20 +34,30 @@ app.get('/', (req, res) => {
 })
 
 app.get('/load', (req, res) => {
-  res.redirect(`/${uuidV4()}`);
+  const url = randomStr(10,str);
+  res.redirect(`/${url}`);
+})
+
+app.post('/load2', (req,res) => {
+  const url = req.param("roomID")
+  res.redirect(`/${url}`);
 })
 
 app.get('/:room', (req, res) => {
   res.render('room', { roomId: req.params.room })
 })
 
+
 io.on('connection', socket => {
   socket.on('join-room', (roomId, userId) => {
     socket.join(roomId)
     socket.to(roomId).broadcast.emit('user-connected', userId);
     // messages
+    socket.on('sender-name', (username)=>{
+      io.to(roomId).emit('catch-sender-name', username);
+
+    })
     socket.on('message', (message) => {
-      //send message to the same room
       io.to(roomId).emit('createMessage', message)
   }); 
 

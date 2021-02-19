@@ -16,6 +16,7 @@ body{
   .navbar{
       padding-right: 20px;
       padding-left: 20px;
+      background-color: white;
   }
   .navbar-nav a{
       padding-left: 10px;
@@ -44,10 +45,20 @@ body{
     color: black;
   }
   .box-container_2{
-    width: 50%;
-    height: 500px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      background-color: white;
+      height:500px;
+      width: 60%;
     /* border: 1px solid black;
     background-color: rgb(219, 243, 181); */
+}
+
+.intro-img{
+    width: 100%;
+    height: 100%;
 }
 
 .button-group{
@@ -72,3 +83,54 @@ body{
     cursor: pointer;
     color: blue;
 }
+
+
+.box-desktop{
+    margin: 0px 20px 20px 20px;
+    background-color: tomato;
+    height: 72%;
+    width: 80%;
+    display: flex;
+    flex-direction:row;
+    justify-content: start ;
+    border: 5px solid black;
+}
+
+
+.inner-box-container{
+    background-color: teal;
+    border: 2px solid black;
+}
+
+img{
+    height: 120px;
+     width: 180px;
+
+}
+
+.btn-my{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    margin: 10px;
+}
+
+@media only screen and (max-width: 1200px) {
+    .btn{
+        font-size: 10px;
+    }
+    .input-custom{
+        width: 50%;
+        font-size: 10px;
+    }
+  }
+
+  @media only screen and (max-width: 1000px) {
+      body{
+          width: 1000px;
+      }
+  }
+
+  .small{
+      font-size: 15px;
+  }

@@ -3,7 +3,8 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Document</title>
+   <title>SlowPork</title>
+   <link rel="icon" href="https://media.giphy.com/media/eK1o6U80dTs1VT6OtQ/giphy.gif">
    <script defer src="https://unpkg.com/peerjs@1.3.1/dist/peerjs.min.js"></script>
    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
@@ -15,42 +16,62 @@
 <body>
     <!-- Navbar -->
     <section id="hero">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#hero">PrivacyChat<p style="font-size: 10px;">Beta<p></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="#hero"><img style="height: 60px; width: 60px;"src="https://media.giphy.com/media/eK1o6U80dTs1VT6OtQ/giphy.gif" />SlowPork <span class="small">V_1.7</span></a>
               <div class="navbar-nav ms-auto">
-                <a class="nav-item nav-link" href="#about">About<span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="https://github.com/kosac-achyut"><i class="fab fa-3x fa-github"></i></a>
               </div>
-            </div>
           </nav>
     </section>
     <section class="container">
         <div class="box-container_1">
-            <h2>Now <strong>Privacy, simplified</strong> in Video Meet</h2>
+            <h2>Now Enjoy Unlimited Video Chat with<strong> SlowPork</strong></h2>
             <br/>
-            <p>With PrivacyChat you can seamlessly take control of your personal information online, without any tradeoffs.</p>
+            <p>With SlowPork you can connect with your friends any where you want, when ever you want. <strong>SlowPork</strong> is here to save you.<strong>(ツ)</strong></p>
             <div class="button-group">
-                <div class="btn">
+                <div class="btn-my">
                     <form action="/load" method="GET">
                         <button   class="btn btn-outline-dark"><i class="fas fa-video" style="padding-right: 3px;"></i>Create Meeting</button>
                     </form>
                         
                 </div>
-                <!-- <div class="btn">
-                    <input class="input-custom" placeholder="Enter RoomID" />
-                    <button type="button" class="btn btn-outline-success" disabled>Join</button>
-                </div> -->
+                <div class="btn-my">
+                    <form action="/load2" method="POST">
+                        <input class="input-custom" name="roomID" placeholder="Enter RoomID" pattern="[0-9a-z]{10}" required />
+                        <button type="submit" class="btn btn-outline-success">Join Meeing</button>
+                    </form>
+                </div>
+
                 <hr style="color: black;"/>
                 <div class="outro">
                     <a href="https://kosac-achyut.github.io/Achyut_Saroch_Profile/">Created by Achyut Saroch</a>
+                    <br>
+                    <a href="https://giphy.com/pigx3">Gif by Pigx3</a>
                 </div>
             </div>
         </div>
         <div class="box-container_2">
-            <img src="img/intro-img.jpg"/>
+            <div class="box-desktop">
+                <div>
+                    <div class="inner-box-container"><img src="https://media.giphy.com/media/YWUZ8lL3sE63gupqyG/giphy.gif" ></div>
+                <div class="inner-box-container"><img src="https://media.giphy.com/media/pOTQi5hDAEkXnMn2o7/giphy.gif" ></div>
+                <div class="inner-box-container"><img src="https://media.giphy.com/media/B0XL2nkDJXKEJvWX86/giphy.gif"></div>
+                </div>
+                <div>
+                    <div class="inner-box-container"><img src="https://media.giphy.com/media/apjZNsrjUsRWyusORh/giphy.gif" ></div>
+                    <div class="inner-box-container"><img src="https://media.giphy.com/media/YWUZ8lL3sE63gupqyG/giphy.gif" ></div>
+                    <div class="inner-box-container"><img src="https://media.giphy.com/media/ZcaGc2Ic0hZT6GT0HH/giphy.gif" ></div>
+                </div>
+                <div>
+                    <div class="inner-box-container"><img src="https://media.giphy.com/media/4MXO5VCghbB6QOhCrT/giphy.gif" ></div>
+                    <div class="inner-box-container"><img src="https://media.giphy.com/media/9PeNVDyn0QC31KXK5W/giphy.gif" ></div>
+                    <div class="inner-box-container"><img src="https://media.giphy.com/media/YWUZ8lL3sE63gupqyG/giphy.gif" ></div>
+                </div>
+                
+
+
+
+            </div>
         </div>
     </section>
     
