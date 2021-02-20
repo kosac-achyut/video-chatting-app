@@ -3,6 +3,8 @@
 body{
     background-color: black;
     font-family: 'Courier New', Courier, monospace;
+    min-width: 500;
+    min-height: 600;
 }
 
 .main {
@@ -132,13 +134,13 @@ body{
     border-radius:5px;
     background-color: white;
     width: auto;
-    height: auto;
     padding: 10px;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     max-width: 600px;
+    height: auto;
 }
 
 /* room-nav-bar */
@@ -221,6 +223,11 @@ body{
     flex-direction: column;
 }
 
+.info_show_roomId h2{
+    font-size: 1em;
+
+}
+
 .nav-modal-info{
     background-color: white;
     width: 100%;
@@ -294,3 +301,34 @@ input {
 .message-body-msg{
     font-size: 15px;
 }
+
+@media only screen and (max-width: 1000px) {
+
+    .modal-img-1{
+        height: 50px;
+        width: 50px;
+    }
+    .modal-container{
+        border-radius:5px;
+        background-color: white;
+        width: auto;
+        height: auto;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        align-items: center;
+        max-width: 400px;
+    }
+
+    .input-custom{
+        font-size: 10px;
+        padding: 2px;
+    }
+    .modal-join-btn{
+        font-size: 10px;
+    }
+}
+
+
+

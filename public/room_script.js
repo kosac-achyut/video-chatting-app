@@ -69,6 +69,7 @@ const myPeer = new Peer(undefined, {
   host: '/',
   port: '443'
 })
+let video_holder;
 let myVideoStream;
 const myVideo = document.createElement('video')
 myVideo.muted = true;
@@ -112,9 +113,12 @@ socket.on('catch-sender-name', send_user =>
 
 const __send_message = () =>
 {
-  let val = document.getElementById("chat_message").value;
+  let str = document.getElementById("chat_message").value;
+  let val = str;
+  str="";
   if(val.length > 0)
   {
+
       socket.emit('sender-name',username);
       socket.emit('message',val);   
       val = "";
