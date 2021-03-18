@@ -71,8 +71,6 @@ const myPeer = new Peer(undefined, {
 })
 let video_holder;
 let myVideoStream;
-const myVideo = document.createElement('video')
-myVideo.muted = true;
 const peers = {}
 navigator.mediaDevices.getUserMedia({
   video: true,
